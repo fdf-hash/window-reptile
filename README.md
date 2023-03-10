@@ -1,14 +1,23 @@
-下载依赖
-<br/>
-# npm i
+## node爬虫下载图片
 
-运行
-<br/>
-# npm start
+## npm i
 
-# 输入网址
+## npm start
 
-# image文件夹下创建目录，文件路径./image/创建的文件名
+输入网址
+```html
+    <label for="url">网址:</label>
+    <input type="text" id="url" name="url"><br><br>
+```
 
-# 下载图片
+image文件夹下创建目录，文件路径./image/创建的文件名
+```html
+    <label for="path">保存路径:</label>
+    <input type="text" id="path" name="path" value="./image/tx"><br><br>
+```
+
+事件
+```html
+    <button type="submit">下载图片</button>
+```
 
