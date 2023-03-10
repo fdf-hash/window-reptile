@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>图片下载器</title>
+  </head>
+  <body>
+    <form id="form">
+      <label for="url">网址:</label>
+      <input type="text" id="url" name="url"><br><br>
+      <label for="path">保存路径:</label>
+      <input type="text" id="path" name="path" value="./image/tx"><br><br>
+      <button type="submit">下载图片</button>
+    </form>
+    <script>
+      const form = document.getElementById('form');
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const url = document.getElementById('url').value;
+        const path = document.getElementById('path').value;
+        window.electron.ipcRenderer.send('download-image', url, path);
+      });
+    </script>
+  </body>
+</html>
