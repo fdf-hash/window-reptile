@@ -4,7 +4,7 @@
   "description": "An image downloader using Electron",
   "main": "main.js",
   "authors": [
-    "Your Name <fdf1314phl@gmail.com>"
+    "Your Name <975867544@qq.com>"
   ],
   "dependencies": {
     "cheerio": "^1.0.0-rc.5",
