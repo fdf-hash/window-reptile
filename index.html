@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>图片下载器</title>
+  <title>node简单脚本</title>
+  <script src="/js/jq.js"></script>
 </head>
 
 <body>
@@ -15,7 +16,7 @@
     <button type="submit">下载图片</button>
     <hr>
     <label for="path">应用程序路径:</label>
-    <input type="text" id="srartPath" name="path" placeholder="应用程序路径"><br><br>
+    <input type="text" id="startPath" placeholder="应用程序路径"><br><br>
     <button id="start">打开程序</button>
   </form>
   <script>
@@ -27,7 +28,7 @@
       window.electron.ipcRenderer.send('download-image', url, path);
     });
     document.getElementById('start').onclick = function(){
-      const path = document.getElementById('srartPath').value;
+      const path = document.getElementById('startPath').value;
       window.electron.ipcRenderer.send('start-exe', path);
     }
   </script>
